@@ -25,12 +25,6 @@ private static String browserName = System.getProperty("browser","firefox");
     	switch (browserName.toLowerCase()) {
 		case "chrome":
 			return new ChromeDriver();
-//			ChromeOptions options = new ChromeOptions();
-//			options.addArguments("--reomte-allow-origins=*");
-//			WebDriverManager.chromedriver().setup();
-//		    return new ChromeDriver(options);
-  
-			
 		case "firefox":
 			return new FirefoxDriver();
 		case "edge":

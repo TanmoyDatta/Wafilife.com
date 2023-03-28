@@ -2,20 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-28T22:30:13 BDT" name="Default suite" finished-at="2023-03-28T22:30:16 BDT" duration-ms="2850">
+  <suite started-at="2023-03-29T00:49:52 BDT" name="Default suite" finished-at="2023-03-29T00:50:17 BDT" duration-ms="24999">
     <groups>
     </groups>
-    <test started-at="2023-03-28T22:30:13 BDT" name="Default test" finished-at="2023-03-28T22:30:16 BDT" duration-ms="2850">
+    <test started-at="2023-03-29T00:49:52 BDT" name="Default test" finished-at="2023-03-29T00:50:17 BDT" duration-ms="24999">
       <class name="testcases.TestCases">
-        <test-method is-config="true" signature="setBrowser()[pri:0, instance:testcases.TestCases@27406a17]" started-at="2023-03-28T22:30:04 BDT" name="setBrowser" finished-at="2023-03-28T22:30:13 BDT" duration-ms="8917" status="PASS">
+        <test-method is-config="true" signature="setBrowser()[pri:0, instance:testcases.TestCases@17f62e33]" started-at="2023-03-29T00:49:43 BDT" name="setBrowser" finished-at="2023-03-29T00:49:52 BDT" duration-ms="8991" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBrowser -->
-        <test-method signature="testCases()[pri:0, instance:testcases.TestCases@27406a17]" started-at="2023-03-28T22:30:13 BDT" name="testCases" finished-at="2023-03-28T22:30:16 BDT" duration-ms="2766" status="PASS">
+        <test-method signature="testCases(java.lang.String,java.lang.String)[pri:0, instance:testcases.TestCases@17f62e33]" started-at="2023-03-29T00:49:52 BDT" name="testCases" data-provider="ValidCredensial" finished-at="2023-03-29T00:50:17 BDT" duration-ms="24936" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[gilly50@adalah.dev]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[pass123#]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCases -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:testcases.TestCases@27406a17]" started-at="2023-03-28T22:30:16 BDT" name="quitBrowser" finished-at="2023-03-28T22:30:19 BDT" duration-ms="2916" status="PASS">
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:testcases.TestCases@17f62e33]" started-at="2023-03-29T00:50:17 BDT" name="quitBrowser" finished-at="2023-03-29T00:50:19 BDT" duration-ms="1876" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->

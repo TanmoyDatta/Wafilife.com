@@ -2,11 +2,17 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import static utilities.DriverSetUp.getDriver;
+
+import java.time.Duration;
 
 public class BasePage {
 	
 	// find locator
+	
 	public WebElement getElement(By locator) {
 		return getDriver().findElement(locator);
 	}
@@ -21,8 +27,11 @@ public class BasePage {
 	}
 	// get text method
 	public String getElementText(By locator){
-		return getElement(locator).getText();
-		
+		return getElement(locator).getText();	
 	}
-
+	// wait driver wait
+	public WebElement getVisibleElements(By locator) {
+		WebDriverWait wait = new WebDriverWait(getDriver(),Duration.ofSeconds(30));
+		return wait.until(ExpectedConditions.elementToBeClickable(locator));
+	}
 }

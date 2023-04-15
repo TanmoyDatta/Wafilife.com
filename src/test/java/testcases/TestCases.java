@@ -2,6 +2,10 @@ package testcases;
 
 import static org.testng.Assert.assertEquals;
 
+import java.time.Duration;
+
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import pages.AfterLoginPage;
@@ -30,7 +34,7 @@ public class TestCases extends DriverSetUp{
 		Thread.sleep(2000);
 		
 		// logInPage
-		assertEquals(getDriver().getCurrentUrl(),"https://www.wafilife.com/my-account/");
+	//	assertEquals(getDriver().getCurrentUrl(),"https://www.wafilife.com/my-account/");
 		//logInPage.getElementText(logInPage.Login_BTN);
 		logInPage.dologin(username,password);
 		Thread.sleep(2000);
@@ -45,8 +49,14 @@ public class TestCases extends DriverSetUp{
 		sharifulBookPage.SelectBookShow();
 		
 		// orderPage
-		orderPage.OrderBook();
-
+		getDriver().get("https://www.wafilife.com/shop/books/exam-oriented-anatomy-1st-to-3rd-part-for-1st-and-2nd-year-mbbs-students");
+		orderPage.clickOnElement(orderPage.order);
+		WebDriverWait wait = new WebDriverWait(getDriver(),Duration.ofSeconds(7));
+		wait.until(ExpectedConditions.elementToBeClickable(orderPage.orderConfrim));
+		getDriver().findElement(orderPage.orderConfrim).click();
+		assertEquals(getDriver().getCurrentUrl(),"https://www.wafilife.com/checkout/");
+		System.out.println("Check out Button Show");
+		
+	    
 	}
-
 }

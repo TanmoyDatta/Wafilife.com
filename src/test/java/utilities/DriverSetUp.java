@@ -28,7 +28,6 @@ public class DriverSetUp {
 			return new FirefoxDriver();
 		case "edge":
 			return new EdgeDriver();
-
 		default:
 			throw new RuntimeException("Browser is not found using the name '"+browserName+"'!");
 		}
